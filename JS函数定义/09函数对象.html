@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>函数是对象</title>
+</head>
+<!-- 
+  在 JavaScript 中使用 typeof 操作符判断函数类型将返回 "function" 。
+  但，JavaScript 函数描述为一个对象更加准确。
+  JavaScript 函数有 属性 和 方法。
+  arguments.length 属性返回函数调用过程接收到的参数个数：
+ -->
+
+<body>
+    <p> arguments.length 属性返回函数接收到参数的个数：</p>
+    <p id="demo"></p>
+    <script>
+        function myFunction(a, b) {
+            return arguments.length;
+        }
+        console.log(typeof(myFunction())); //number 返回的是myFunction()运行之后的值
+        console.log(typeof(myFunction)); //function 返回的是myFunction函数的类型
+        document.getElementById("demo").innerHTML = myFunction(4, 3);
+    </script>
+</body>
+
+</html>

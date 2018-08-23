@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>使用构造函数调用对象</title>
+</head>
+
+<body>
+    <p>该实例中， myFunction 是函数构造函数:</p>
+    <p id="demo"></p>
+    <script>
+        //       如果函数调用前使用了 new 关键字, 则是调用了构造函数。
+        // 这看起来就像创建了新的函数，但实际上 JavaScript 函数是重新创建的对象：
+        // 构造函数:
+        function myFunction(arg1, arg2) {
+            this.firstName = arg1;
+            this.lastName = arg2;
+        }
+        //this creats a new object
+        var x = new myFunction("John", "Doe")
+        document.getElementById("demo").innerHTML = x.firstName;
+    </script>
+</body>
+
+</html>

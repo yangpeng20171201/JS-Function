@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>函数运行实例1</title>
+</head>
+
+<body>
+    <p>本例会调用一个函数执行计算，然后返回结果。</p>
+    <p id="demo"></p>
+    <!-- 分号是用来分割可执行JavaScript语句
+         由于函数声明不是一个可执行语句，所以不以分号结束。
+    -->
+    <script>
+        function myFunction(a, b) {
+            return a * b;
+        }
+        document.getElementById('demo').innerHTML = myFunction(1, 5);
+    </script>
+
+</body>
+
+</html>

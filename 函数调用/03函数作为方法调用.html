@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数作为方法调用</title>
+</head>
+函数作为方法调用
+
+<!-- 在 JavaScript 中你可以将函数定义为对象的方法。 -->
+
+<body>
+    <!-- 以下实例创建了一个对象 (myObject), 对象有两个属性 (firstName 和 lastName), 及一个方法 (fullName): -->
+    <p>myObject.fullName() 返回 John Doe:</p>
+    <p id="demo"></p>
+    <script>
+        var myObject = {
+                firstName: "John",
+                lastName: "Doe",
+                fullName: function() {
+                    return this.firstName + " " + this.lastName;
+                }
+            }
+            // fullName 方法是一个函数。函数属于对象。 myObject 是函数的所有者。
+            // this对象，拥有 JavaScript 代码。实例中 this 的值为 myObject 对象。
+        document.getElementById('demo').innerHTML = myObject.fullName();
+    </script>
+</body>
+
+</html>

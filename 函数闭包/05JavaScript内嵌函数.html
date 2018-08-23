@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<!-- 
+  所有函数都能访问全局变量。  
+实际上，在 JavaScript 中，所有函数都能访问它们上一层的作用域。
+JavaScript 支持嵌套函数。嵌套函数可以访问上一层的函数变量。
+该实例中，内嵌函数 plus() 可以访问父函数的 counter 变量：
+ -->
+
+<body>
+    <p>内嵌函数 plus() 可以访问父函数的 counter 变量：</p>
+    <p id="demo">0</p>
+    <script>
+        document.getElementById("demo").innerHTML = add();
+
+        function add() {
+            var counter = 0;
+
+            function plus() {
+                counter += 1;
+            }
+            plus();
+            return counter;
+        }
+    </script>
+</body>
+
+</html>

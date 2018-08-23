@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>构造函数</title>
+</head>
+<p>以下是通过内置的JavaScript函数构造器new了一个函数构造器(Function)来定义的。 </p>
+<p id="demo"></p>
+
+<body>
+    <!-- 函数同样可以通过内置的 JavaScript 函数构造器（Function()）定义。 -->
+    <script>
+        // var myFunction = new Function('a', 'b', 'return a*b');
+        // var x = myFunction(4, 5);
+        // 	在 JavaScript 中，很多时候，你需要避免使用 new 关键字。
+        var myFunction = function(a, b) {
+            return a * b
+        }
+        document.getElementById('demo').innerHTML = myFunction(5, 6);
+    </script>
+</body>
+
+</html>

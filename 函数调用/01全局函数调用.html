@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>全局函数调用</title>
+</head>
+
+<body>
+    <p>
+        全局函数 (myFunction) 返回参数参数相乘的结果：
+    </p>
+    <p id="demo"></p>
+    <script>
+        // myFunction() == window.myFunction() 
+        function myFunction(a, b) {
+            return a * b;
+        }
+        // myFunction();
+        //这是调用 JavaScript 函数常用的方法， 但不是良好的编程习惯 
+        // 全局变量，方法或函数容易造成命名冲突的bug。
+        // window.myFunction();
+        document.getElementById("demo").innerHTML = myFunction(10, 2);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>创建函数来统计所有的和</title>
+</head>
+
+<body>
+    <p>计算所有参数之和：</p>
+    <p id="demo"></p>
+    <script>
+        function sumall() {
+            var i, sum = 0;
+            for (i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+        document.getElementById('demo').innerHTML = sumall(1, 15, 5684, 153, 55);
+    </script>
+</body>
+
+</html>

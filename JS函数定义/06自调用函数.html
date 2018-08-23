@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>自调用函数</title>
+</head>
+<!-- 
+  函数表达式可以 "自调用"。
+  自调用表达式会自动调用。
+  如果表达式后面紧跟 () ，则会自动调用。
+  Y不能自调用声明的函数。
+  通过添加括号，来说明它是一个函数表达式：
+ -->
+<p>函数可以自我调用</p>
+<p id="demo"></p>
+
+<body>
+    <script>
+        //一个 匿名自我调用的函数 (没有函数名)。
+        (function() {
+            var x = "hello"; //我将调用我自己            
+            document.getElementById('demo').innerHTML = x;
+        })();
+    </script>
+</body>
+
+</html>

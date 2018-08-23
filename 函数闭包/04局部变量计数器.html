@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>局部变量计数</title>
+</head>
+
+<body>
+
+    <p>局部变量计数。</p>
+    <button type="button" onclick="myFunction()">计数!</button>
+    <p id="demo">0</p>
+    <script>
+        function add() {
+            var counter = 0;
+            return counter += 1;
+        }
+        //每次计数都为1
+        function myFunction() {
+            document.getElementById("demo").innerHTML = add();
+        }
+    </script>
+</body>
+
+</html>

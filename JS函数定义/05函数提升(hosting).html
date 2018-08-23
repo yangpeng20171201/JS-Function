@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>函数提升</title>
+</head>
+<p>函数提升应用在变量的声明和函数的声明</p>
+<p id="demo"></p>
+
+<body>
+    <!-- 函数提升是JavaScript默认将当期作用域提升到前面去的行为 -->
+    <script>
+        //函数可以在声明前调用
+        myFunction(5);
+        //使用函数表达式时函数无法提升
+        function myFunction(y) {
+            return y * y;
+        }
+    </script>
+</body>
+
+</html>

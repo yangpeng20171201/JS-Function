@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>全局计数器</title>
+</head>
+
+<body>
+
+    <p>全局变量计数。</p>
+    <button type="button" onclick="myFunction()">计数!</button>
+    <p id="demo">0</p>
+    <script>
+        var counter = 0;
+
+        function add() {
+            return counter += 1;
+        }
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = add();
+        }
+        // 问题 页面上的任何脚本都能改变计数器，即便没有调用 add() 函数。
+        // 如果我在函数内声明计数器，如果没有调用函数将无法修改计数器的值：
+    </script>
+</body>
+
+</html>

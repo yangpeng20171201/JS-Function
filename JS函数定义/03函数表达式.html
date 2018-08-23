@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>函数运行实例1</title>
+</head>
+
+<body>
+    <p>函数可以存储在变量中</p>
+    <p id="demo"></p>
+    <!--
+      函数表达式可以存储在变量中：
+      在函数表达式存储在变量后，变量也可以作为一个函数来使用
+    -->
+    <script>
+        var x = function(a, b) {
+            return a * b
+        };
+        // 以上函数实际上是一个 匿名函数 (函数没有名称)。
+        // 函数存储在变量中，不需要函数名称，通常通过变量名来调用。
+        var z = x(4, 3);
+        document.getElementById('demo').innerHTML = x;
+    </script>
+
+</body>
+
+</html>

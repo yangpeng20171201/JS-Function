@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>全局对象</title>
+</head>
+<!-- 全局对象
+
+当函数没有被自身的对象调用时， this 的值就会变成全局对象。
+在 web 浏览器中全局对象是浏览器窗口（window 对象）。
+该实例返回 this 的值是 window 对象: -->
+
+<body>
+    <p>在 HTML 中 this 的值, 在全局函数是一个 window 对象。</p>
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            return this;
+        }
+        document.getElementById('demo').innerHTML = myFunction();
+    </script>
+</body>
+
+</html>
